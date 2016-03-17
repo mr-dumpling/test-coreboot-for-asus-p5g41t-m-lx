@@ -94,13 +94,16 @@ static void mb_gpio_init(void)
         superio_gpio_config();
 
 	/* IRQ routing */
-	/*RCBA32(0x3100) = 0x00002210;
-	RCBA32(0x3104) = 0x00002100;
-	RCBA32(0x3108) = 0x10004321;
-	RCBA32(0x310c) = 0x00214321;
-	RCBA32(0x3110) = 0x00000001;
-	RCBA32(0x3140) = 0x00410032;
-	RCBA32(0x3144) = 0x32100237;*/
+        RCBA32(0x3100) = 0x00042210;
+        RCBA32(0x3104) = 0x00002100;
+        RCBA32(0x3108) = 0x10004321;
+        RCBA32(0x310c) = 0x00214321;
+        RCBA32(0x3110) = 0x00000001;
+        RCBA32(0x3140) = 0x32410162;
+        RCBA32(0x3144) = 0x32100237;
+        //RCBA32(0x3148) = 0x00003215;  //Should I set these as well?
+        //RCBA32(0x31fc) = 0x03000000;
+
 
 	/* Enable IOAPIC */
 	/*RCBA8(0x31ff) = 0x03;
