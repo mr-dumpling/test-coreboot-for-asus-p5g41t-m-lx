@@ -82,53 +82,46 @@ chip northbridge/intel/x4x		# Northbridge
       device pci 1e.0 on end		# PCI bridge
       device pci 1f.0 on		# ISA bridge
         subsystemid 0x1458 0x5001
-        chip superio/ite/it8718f	# Super I/O
-          device pnp 2e.0 on		# Floppy
-            io 0x60 = 0x3f0
-            irq 0x70 = 6
-            drq 0x74 = 2
-            irq 0xf0 = 0x00
-            irq 0xf1 = 0x80
-          end
-          device pnp 2e.1 on		# COM1
-            io 0x60 = 0x3f8
-            irq 0x70 = 4
-          end
-          device pnp 2e.2 on		# COM2
-            io 0x60 = 0x2f8
-            irq 0x70 = 3
-          end
-          device pnp 2e.3 on		# Parallel port
-            io 0x60 = 0x378
-            irq 0x70 = 7
-            io 0x62 = 0x000
-            drq 0x74 = 4
-            irq 0xf0 = 0x08
-          end
-          device pnp 2e.4 on		# Environment controller
-            io 0x60 = 0x290
-            irq 0x70 = 0x00
-            io 0x62 = 0x000
-            irq 0xf0 = 0x80
-            irq 0xf1 = 0x00
-            irq 0xf2 = 0x0a
-            irq 0xf3 = 0x80
-            irq 0xf4 = 0x00
-            irq 0xf5 = 0x00
-            irq 0xf6 = 0xff
-          end
-          device pnp 2e.5 on		# Keyboard
-            io 0x60 = 0x60
-            irq 0x70 = 1
-            io 0x62 = 0x64
-            irq 0xf0 = 0x48
-          end
-          device pnp 2e.6 on		# Mouse
-            irq 0x70 = 12
-            irq 0x71 = 2
-            irq 0xf0 = 0
-          end
-        end
+        chip superio/winbond/w83627dhg	# Super I/O
+		device pnp 2e.1 off #  Parallel Port
+			io 0x60 = 0x378
+			irq 0x70 = 7
+		end
+		device pnp 2e.2 on #  Com1
+			io 0x60 = 0x3f8
+			irq 0x70 = 4
+		end
+		device pnp 2e.3 on #  Com2
+			io 0x60 = 0x2f8
+			irq 0x70 = 3
+		end
+		device pnp 2e.5 on #  PS/2 keyboard & mouse
+			io 0x60 = 0x60
+			io 0x62 = 0x64
+			irq 0x70 = 1
+		end
+		#device pnp 2e.6 off #  SPI
+		#end
+		device pnp 2e.307 off #  GPIO6
+		end
+		device pnp 2e.8 on #  WDTO#, PLED
+		end
+		device pnp 2e.009 on #  GPIO2
+		end
+		device pnp 2e.109 on #  GPIO3
+		end
+		device pnp 2e.209 on #  GPIO4
+		end
+		device pnp 2e.309 off #  GPIO5
+		end
+		device pnp 2e.a off #  ACPI
+		end
+		device pnp 2e.b on # HWM
+			io 0x60 = 0x290
+		end
+		device pnp 2e.c off # PECI, SST
+		end
+	end	#superio/winbond/w8362
       end
       device pci 1f.1 on		# PATA/IDE
         subsystemid 0x1458 0xb004
