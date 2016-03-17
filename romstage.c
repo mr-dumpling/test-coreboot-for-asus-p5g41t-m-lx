@@ -79,32 +79,32 @@ static void mb_gpio_init(void)
 	dev = PCI_DEV(0x0, 0x1f, 0x0);
 
 	/* Set the value for GPIO base address register and enable GPIO. */
-	//pci_write_config32(dev, GPIO_BASE, (DEFAULT_GPIOBASE | 1));
-	//pci_write_config8(dev, GPIO_CNTL, 0x10);
+	pci_write_config32(dev, GPIO_BASE, (DEFAULT_GPIOBASE | 1));
+	pci_write_config8(dev, GPIO_CNTL, 0x10);
 
-	//outl(0x1f15f7c0, DEFAULT_GPIOBASE + 0x00); /* GPIO_USE_SEL */
-	//outl(0xe2e9ffc3, DEFAULT_GPIOBASE + 0x04); /* GP_IO_SEL */
-	//outl(0xe0d7fcc3, DEFAULT_GPIOBASE + 0x0c); /* GP_LVL */
-	//outl(0x000039ff, DEFAULT_GPIOBASE + 0x2c); /* GPI_INV */
-	//outl(0x000000e7, DEFAULT_GPIOBASE + 0x30);
-	//outl(0x000000f0, DEFAULT_GPIOBASE + 0x34);
-	//outl(0x00000083, DEFAULT_GPIOBASE + 0x38);
+	outl(0x1f3df7c1, DEFAULT_GPIOBASE + 0x00); /* GPIO_USE_SEL */
+	outl(0xe0c86ec3, DEFAULT_GPIOBASE + 0x04); /* GP_IO_SEL */
+	outl(0xe2eebe7f, DEFAULT_GPIOBASE + 0x0c); /* GP_LVL */
+	outl(0x00002400, DEFAULT_GPIOBASE + 0x2c); /* GPI_INV */
+	outl(0x000000ff, DEFAULT_GPIOBASE + 0x30); //... GPIO_USE_SEL2
+	outl(0x000000f0, DEFAULT_GPIOBASE + 0x34); //... GP_IO_SEL2
+	outl(0x000300f3, DEFAULT_GPIOBASE + 0x38); //... GP_LVL2
 
 	/* Set default GPIOs on superio */
         superio_gpio_config();
 
 	/* IRQ routing */
-	//RCBA32(0x3100) = 0x00002210;
-	//RCBA32(0x3104) = 0x00002100;
-	//RCBA32(0x3108) = 0x10004321;
-	//RCBA32(0x310c) = 0x00214321;
-	//RCBA32(0x3110) = 0x00000001;
-	//RCBA32(0x3140) = 0x00410032;
-	//RCBA32(0x3144) = 0x32100237;
+	/*RCBA32(0x3100) = 0x00002210;
+	RCBA32(0x3104) = 0x00002100;
+	RCBA32(0x3108) = 0x10004321;
+	RCBA32(0x310c) = 0x00214321;
+	RCBA32(0x3110) = 0x00000001;
+	RCBA32(0x3140) = 0x00410032;
+	RCBA32(0x3144) = 0x32100237;*/
 
 	/* Enable IOAPIC */
-	//RCBA8(0x31ff) = 0x03;
-	//RCBA8(0x31ff);
+	/*RCBA8(0x31ff) = 0x03;
+	RCBA8(0x31ff);*/
 }
 
 static void ich7_enable_lpc(void)
@@ -139,13 +139,15 @@ void main(unsigned long bist)
 
         post_code(0xA3);
        
-	winbond_enable_serial(SERIAL_DEV, CONFIG_TTYS0_BASE);//ite_enable_serial(SERIAL_DEV, CONFIG_TTYS0_BASE);
+	winbond_enable_serial(SERIAL_DEV, CONFIG_TTYS0_BASE);
+
+        printk(BIOS_DEBUG, "Hello world 1!!!!\n");
 
         post_code(0xA4);
 
 	console_init();
 
-        printk(BIOS_DEBUG, "If you read this then shit is working.\n");
+        printk(BIOS_DEBUG, "Hello world 2!!!!\n");
 
         post_code(0xA5);
 
@@ -159,7 +161,7 @@ void main(unsigned long bist)
 
 	x4x_early_init();
 
-        post_code(0xA8);
+        post_code(0xBB);
 
 	printk(BIOS_DEBUG, "Initializing memory\n");
 	sdram_initialize(0, spd_addrmap);
