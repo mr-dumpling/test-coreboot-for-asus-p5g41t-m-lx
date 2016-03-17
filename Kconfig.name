@@ -1,0 +1,2 @@
+config BOARD_ASUS_P5G41T_M_LX
+	bool "P5-G41T-M_LX"
