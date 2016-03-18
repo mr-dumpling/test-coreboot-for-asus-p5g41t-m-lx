@@ -1,0 +1,67 @@
+0000-0cf7 : PCI Bus 0000:00
+  0000-001f : dma1
+  0020-0021 : pic1
+  0040-0043 : timer0
+  0050-0053 : timer1
+  0060-0060 : keyboard
+  0061-0061 : PNP0800:00
+  0064-0064 : keyboard
+  0070-0071 : rtc0
+  0080-008f : dma page reg
+  00a0-00a1 : pic2
+  00c0-00df : dma2
+  00f0-00ff : PNP0C04:00
+    00f0-00ff : fpu
+  0170-0177 : 0000:00:1f.1
+    0170-0177 : ata_piix
+  01f0-01f7 : 0000:00:1f.1
+    01f0-01f7 : ata_piix
+  0290-0297 : pnp 00:03
+  0376-0376 : 0000:00:1f.1
+    0376-0376 : ata_piix
+  0378-037a : parport0
+  037b-037f : parport0
+  03c0-03df : vesafb
+  03f6-03f6 : 0000:00:1f.1
+    03f6-03f6 : ata_piix
+  03f8-03ff : serial
+  0400-041f : pnp 00:04
+  0480-04bf : 0000:00:1f.0
+    0480-04bf : pnp 00:04
+  04d0-04d1 : pnp 00:04
+  0800-0803 : ACPI PM1a_EVT_BLK
+  0804-0805 : ACPI PM1a_CNT_BLK
+  0808-080b : ACPI PM_TMR
+  0810-0815 : ACPI CPU throttle
+  0828-082f : ACPI GPE0_BLK
+  0830-0833 : iTCO_wdt.0.auto
+    0830-0833 : iTCO_wdt
+  0860-087f : iTCO_wdt.0.auto
+    0860-087f : iTCO_wdt
+0cf8-0cff : PCI conf1
+0d00-ffff : PCI Bus 0000:00
+  1000-1fff : PCI Bus 0000:02
+  c800-c80f : 0000:00:1f.2
+    c800-c80f : ata_piix
+  c880-c883 : 0000:00:1f.2
+    c880-c883 : ata_piix
+  cc00-cc07 : 0000:00:1f.2
+    cc00-cc07 : ata_piix
+  d000-d003 : 0000:00:1f.2
+    d000-d003 : ata_piix
+  d080-d087 : 0000:00:1f.2
+    d080-d087 : ata_piix
+  d400-d41f : 0000:00:1d.0
+    d400-d41f : uhci_hcd
+  d480-d49f : 0000:00:1d.1
+    d480-d49f : uhci_hcd
+  d800-d81f : 0000:00:1d.2
+    d800-d81f : uhci_hcd
+  d880-d89f : 0000:00:1d.3
+    d880-d89f : uhci_hcd
+  dc00-dc07 : 0000:00:02.0
+  e000-efff : PCI Bus 0000:01
+    ec00-ec7f : 0000:01:00.0
+      ec00-ec7f : atl1c
+  ffa0-ffaf : 0000:00:1f.1
+    ffa0-ffaf : ata_piix
