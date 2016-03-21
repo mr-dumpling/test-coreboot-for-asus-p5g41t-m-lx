@@ -1,0 +1,123 @@
+superiotool r
+Found Winbond W83627DHG-P/-PT (id=0xb0, rev=0x73) at 0x2e
+Register dump:
+idx 02 20 21 22 23 24 25 26  27 28 29 2a 2b 2c 2d 2e  2f
+val ff b0 73 ff 00 44 00 00  ff 50 00 00 00 f2 01 00  ff
+def 00 b0 NA ff 00 MM 00 MM  RR 50 00 00 RR e2 21 00  00
+LDN 0x00 (Floppy)
+idx 30 60 61 70 74 f0 f1 f2  f4 f5
+val 00 03 f0 06 02 8e 00 ff  00 00
+def 01 03 f0 06 02 8e 00 ff  00 00
+LDN 0x01 (Parallel port)
+idx 30 60 61 70 74 f0
+val 01 03 78 07 03 3a
+def 01 03 78 07 04 3f
+LDN 0x02 (COM1)
+idx 30 60 61 70 f0
+val 01 03 f8 04 00
+def 01 03 f8 04 00
+LDN 0x03 (COM2)
+idx 30 60 61 70 f0 f1
+val 00 02 f8 03 00 00
+def 01 02 f8 03 00 00
+LDN 0x05 (Keyboard)
+idx 30 60 61 62 63 70 72 f0
+val 01 00 60 00 64 01 0c 83
+def 01 00 60 00 64 01 0c 83
+LDN 0x06 (Serial peripheral interface)
+idx 30 62 63
+val 00 00 00
+def 00 00 00
+LDN 0x07 (GPIO 6)
+idx 30 f4 f5 f6 f7 f8
+val 06 ff ff ff ff ff
+def 00 ff 00 00 00 00
+LDN 0x08 (WDTO#, PLED)
+idx 30 f5 f6 f7
+val 00 ff 00 ff
+def 00 00 00 00
+LDN 0x09 (GPIO 2, GPIO 3, GPIO 4, GPIO 5)
+idx 30 e0 e1 e2 e3 e4 e5 e6  e7 e8 e9 f0 f1 f2 f3 f4  f5 f6 f7 f8 f9 fa fe
+val 05 ff ff ff ff 04 00 00  ff 80 ff ff ff ff 09 a4  ce 00 00 00 ff ff ff
+def 00 ff 00 00 ff 00 00 00  00 00 00 ff 00 00 00 ff  00 00 00 00 00 00 00
+LDN 0x0a (ACPI)
+idx 30 70 e0 e1 e2 e3 e4 e5  e6 e7 e8 e9 f2 f3 f4 f6  f7 fe
+val 01 00 00 00 39 00 00 02  1c 10 09 00 7d 00 00 00  00 00
+def 00 00 01 00 ff 08 00 RR  1c 00 RR RR 7c 00 00 00  00 00
+LDN 0x0b (Hardware monitor)
+idx 30 60 61 70 f0 f1 f2
+val 01 02 90 00 81 ff 83
+def 00 00 00 00 81 00 00
+LDN 0x0c (PECI, SST)
+idx e0 e1 e2 e3 e4 e5 e8 e9  ea ec ee ef f1 f2 f3 fe  ff
+val 10 64 48 48 48 00 01 ff  00 00 01 5a 48 50 10 f1  80
+def 00 48 48 48 48 00 00 RR  00 00 01 5a 48 50 10 00  00
+Register dump:
+idx 20 21 22 23 24 25 26 27  28 29 2a 2b 2c 2d 2e 2f
+val b0 73 ff 00 44 00 00 ff  50 00 00 00 f2 01 00 ff
+def b0 73 ff 00 MM 00 00 RR  50 00 00 RR e2 21 00 00
+LDN 0x05 (Keyboard)
+idx 30 60 61 62 63 70 72 f0
+val 01 00 60 00 64 01 0c 83
+def 01 00 60 00 64 01 0c 83
+LDN 0x08 (WDTO#, PLED)
+idx 30 f5 f6 f7
+val 00 ff 00 ff
+def 00 00 00 00
+LDN 0x09 (GPIO 2, GPIO3, GPIO5)
+idx 30 e0 e1 e2 e3 e4 e5 e6  e7 e9 f0 f1 f2 f3 f8 f9  fa fe
+val 05 ff ff ff ff 04 00 00  ff ff ff ff ff 09 00 ff  ff ff
+def 00 ff 00 00 ff 00 00 00  00 00 ff 00 00 00 00 00  00 00
+LDN 0x0a (ACPI)
+idx 30 70 e0 e1 e2 e3 e4 e5  e6 e7 e8 e9 f2 f3 f4 f6  f7 fe
+val 01 00 00 00 39 00 00 02  1c 10 09 00 7d 00 00 00  00 00
+def 00 00 01 00 ff 08 00 00  1c 00 RR RR 7c 00 00 00  00 00
+LDN 0x0b (Hardware monitor)
+idx 30 60 61 70 f0 f1 f2
+val 01 02 90 00 81 ff 83
+def 00 00 00 00 81 RR 00
+LDN 0x0c (PECI)
+idx e0 e1 e2 e3 e4 e5 e8 e9  ea ec fe ff
+val 10 64 48 48 48 00 01 ff  00 00 f1 80
+def 00 48 48 48 48 00 00 RR  00 00 00 00
+Hardware monitor (0x0295)
+Register dump:
+idx 00 01 02 03 04 05 06 07  08 09 0a 0b 0c 0d 0e 0f  10 11 12 13 14 15 16 17  18 19 1a 1b 1c 1d 1e 1f
+val 04 ff 04 4b 31 00 50 10  01 4b 01 01 3c 3c 0a 05  04 ff 10 00 00 01 01 3c  53 17 00 00 1b ff ff cc
+def 04 ff 04 NA 01 00 00 00  01 01 01 01 3c 3c 0a 0a  04 ff 00 00 00 01 01 3c  43 RR RR RR RR RR RR RR
+Register dump:
+idx 20 21 22 23 24 25 26 27  28 29 2a 2b 2c 2d 2e 2f  30 31 32 33 34 35 36 37  38 39 3a 3b 3c 3d 3e 3f
+val 88 e8 d8 d8 88 ca 6f 18  ff b0 ff da 00 48 44 01  68 7d 54 91 11 c1 8d 2e  13 4a 92 c4 31 08 46 ff
+def NA NA NA NA NA NA NA NA  NA NA NA NA NA NA NA NA  NA NA NA NA NA NA NA NA  NA NA NA NA NA NA NA NA
+Register dump:
+idx 40 41 42 43 44 45 46 47  48 49 4a 4b 4c 4d 4e 4f
+val 01 ce 00 ff df 00 3f d5  2d 02 00 44 08 95 06 a3
+def 03 00 00 ff ff 00 3f 55  2d 00 00 44 10 95 80 a3
+LDN 0x00 (Bank 0)
+idx 50 51 52 53 54 55 56 57  58 59 5a 5b 5c 5d 5e 5f  60 61 62 63 64 65 66 67  68 69 6a 6b 6c 6d 6e 6f
+val ff ff 00 ff ff ff 00 80  c1 20 ff ff 19 24 00 05  04 7f 40 00 01 01 3c ff  12 ff 01 ff ff ff ff 00
+def RR RR RR RR RR RR 00 80  c1 70 RR RR RR 04 04 RR  04 NA 40 00 01 01 3c ff  01 ff 01 ff ff ff ff 00
+LDN 0x00 (Bank 0 [...])
+idx 70 71 72 73 74 75 76 77  78 79 7a 7b 7c 7d
+val 00 00 00 00 00 0e 7f 7f  7f 7f 7f 7f 01 fb
+def 00 00 00 00 00 0e 00 00  00 00 00 00 00 NA
+LDN 0x01 (Bank 1)
+idx 50 51 52 53 54 55 56 58  59 5a 5b 5c 5d 5e
+val 2a 00 00 4b 00 50 01 00  00 00 00 00 00 0e
+def NA NA 00 4b 00 50 00 00  00 00 00 00 00 0e
+LDN 0x02 (Bank 2)
+idx 50 51 52 53 54 55 56
+val 14 80 02 7d 00 7f 1a
+def NA NA 00 4b 00 50 00
+LDN 0x04 (Bank 4)
+idx 50 51 52 53 54 55 56 57  58 59 5a 5b 5c 5d 5e 5f
+val 3b 13 ff 00 00 00 00 04  65 ce 1c bb 09 60 20 7f
+def 00 13 RR 00 00 00 00 RR  RR 00 00 00 RR RR RR RR
+LDN 0x05 (Bank 5)
+idx 50 51 52 53 54 55 56 57  58 59 5a 5b 5c
+val da e3 00 ff a0 21 11 53  1f d4 00 00 14
+def NA NA RR NA NA NA NA NA  RR RR RR RR NA
+LDN 0x06 (Bank 6)
+idx 50 51 52 53 54 55 56 57  58 59 5a 5b 5c 5d 5e 5f
+val 00 a5 03 be 0a 57 14 ae  14 ae 0d ff ff ff ff ff
+def 00 00 00 00 00 00 00 00  00 00 0d ff ff ff ff ff
