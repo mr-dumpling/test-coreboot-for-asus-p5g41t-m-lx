@@ -1,0 +1,23 @@
+\0x00\0x00\0x00\0xfd
+
+coreboot-4.3-1bf5e6409678d04fd15f9625460078853118521c Fri Mar 18 21:43:35 UTC 2016 romstage starting... {Note: random date/time? It's 22-03-2016 01:10...}
+POST: 0xa3
+POST: 0xa4
+SMBus controller enabled.
+POST: 0xa5
+Initializing memory
+POST: 0xe0
+Setting up RAM controller.
+Dimms per channel: 1
+2 CPU cores
+Capable of DDR2 of 667 MHz or lower
+fefffac0: 92 10 0b 02 02 11 00 09 03 52 01 08 0c 00 3c 00  .........R....<.
+fefffad0: 69 78 69 30 69 11 20 89 70 03 3c 3c 00 f0 83 01  ixi0i. .p.<<....
+fefffae0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+fefffaf0: 00 00 00 00 00 00 00 00 00 00 00 00 0f 11 01 01  ................
+fefffd48: 92 10 0b 02 02 11 00 09 03 52 01 08 0c 00 3c 00  .........R....<.
+fefffd58: 69 78 69 30 69 11 20 89 70 03 3c 3c 00 f0 83 01  ixi0i. .p.<<....
+fefffd68: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+fefffd78: 00 00 00 00 00 00 00 00 00 00 00 00 0f 11 01 01  ................
+Memory type: DDR3  {Note: This line is output by an extra debug statement I added to the X4X ram_init code. The code knows it's ddr3...}
+16DS not supported
